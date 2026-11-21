@@ -1,0 +1,102 @@
+/* BLACKOUT: The Meridian Heist — page styling. Dark, lamplit, quiet. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #07080d;
+  color: #d7dce6;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header { text-align: center; padding: 14px 12px 6px; }
+header h1 {
+  margin: 0;
+  color: #f5c542;
+  font-size: 30px;
+  letter-spacing: 6px;
+}
+header h1 span {
+  color: #e8e8e8;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.tagline { margin: 4px 0 0; color: #9aa3b2; font-size: 13px; }
+#hud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+  justify-content: center;
+  width: 960px;
+  max-width: 96vw;
+  padding: 8px 10px;
+  background: #12141d;
+  border: 1px solid #262b3d;
+  border-radius: 6px;
+  font-size: 13px;
+}
+#hud-heist { color: #ffd166; font-weight: bold; }
+#hud-suspicion-bar {
+  display: inline-block;
+  width: 110px;
+  height: 10px;
+  background: #232838;
+  border-radius: 5px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+#hud-suspicion-fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: #46a758;
+  transition: width 0.15s linear;
+}
+#hud-alarm { color: #f5a524; }
+#hud-gadgets { color: #9aa3b2; }
+#hud-objective {
+  width: 960px;
+  max-width: 96vw;
+  padding: 6px 10px 0;
+  color: #ffd166;
+  font-size: 13px;
+  text-align: center;
+}
+main { position: relative; margin-top: 8px; }
+#game {
+  display: block;
+  border: 2px solid #262b3d;
+  border-radius: 6px;
+  background: #0b0d12;
+  max-width: 96vw;
+  height: auto;
+  cursor: crosshair;
+}
+#mini {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid #3a4157;
+  border-radius: 4px;
+  opacity: 0.92;
+}
+#toast {
+  margin-top: 8px;
+  min-height: 20px;
+  color: #ffd166;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+footer {
+  width: 960px;
+  max-width: 96vw;
+  color: #9aa3b2;
+  font-size: 12.5px;
+  line-height: 1.55;
+  padding: 4px 4px 18px;
+}
+footer strong { color: #d7dce6; }

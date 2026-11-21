@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BLACKOUT: The Meridian Heist — a top-down stealth game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>BLACKOUT <span>The Meridian Heist</span></h1>
+  <p class="tagline">Six heists. Twenty-four guards. Forty treasures. Five gadgets. One rule: never be seen.</p>
+</header>
+<div id="hud">
+  <span id="hud-heist">BLACKOUT</span>
+  <span id="hud-time">⏱ 0:00</span>
+  <span id="hud-loot">◆ 0/0</span>
+  <span id="hud-suspicion">Suspicion 0%</span>
+  <span id="hud-suspicion-bar"><span id="hud-suspicion-fill"></span></span>
+  <span id="hud-alarm">Alarm ○○○</span>
+  <span id="hud-gadgets"></span>
+</div>
+<div id="hud-objective">Objective: steal the ★ star prize, then reach the exit (X)</div>
+<main>
+  <canvas id="game" width="960" height="608"></canvas>
+  <canvas id="mini" width="120" height="76" title="Minimap"></canvas>
+</main>
+<div id="toast"></div>
+<footer>
+  <p><strong>Move</strong> WASD / arrows · <strong>Run</strong> Shift (loud) · <strong>Sneak</strong> Ctrl / C (silent) ·
+  <strong>E</strong> hide / pick locks · <strong>1–5</strong> gadgets · <strong>Click</strong> toss a pebble at that spot ·
+  <strong>Esc</strong> menu</p>
+  <p>Gadgets: <strong>1</strong> Pebble Lure · <strong>2</strong> Smoke Bomb · <strong>3</strong> EMP Pulse · <strong>4</strong> Lockpick Kit · <strong>5</strong> Shadow Cloak.
+  Guards patrol, investigate noise, and chase what they see. Lamps light you up — darkness hides you.
+  Cameras sweep; EMP kills them. Three alarms means lockdown. Steal the ★, reach EXIT, stay a ghost.</p>
+</footer>
+<script src="levels.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
